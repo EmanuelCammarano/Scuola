@@ -1,2 +1,2 @@
 ## Appunti Scuola
-Questo è un file obbligatorio sopra trovi i capitoli di storia
+Questo è un file obbligatorio sopra trovi tutti gli appunti
