@@ -17,3 +17,24 @@ Unit. L'istruzione prelevata viene trasferita in un registro specifico e quindi 
 2. fase di Decode dell'istruzione.
 3. fase di Fetch degli operandi.
 4. fase di Execute dell'istruzione.
+#### Fetch dell'istruzione
+Il termine Fetch significa **"prelevamento"** e identifica la fase in cui la CPU deve reperire l'istruzione da eseguire. 
+In questa fase la CPU deve dialogare con la memoria RAM per ottenere il codice macchina dell'istruzione da eseguire.
+#### Decode dell'istruzione
+La fase di Decode rappresenta una fase interna alla CPU durante la quale avviene l'interpretazione dell'istruzione e 
+la preparazione dei dispositivi necessari. In questa fase infatti, il codice macchina dell'istruzione viene codificato in 
+operazioni da eseguire da parte della CPU. 
+#### Fetch degli operandi
+In base alla codifica dell'istruzione, il processore riconosce se è necessario o meno prelevare dalla memoria o da un 
+registro interno un altro dato per completare l'esecuzione dell'istruzione. In tal caso viene eseguita un'operazione 
+di lettura, dalla memoria o da un registro, chiamata appunto Fetch degli operandi
+#### Execute dell'istruzione
+Nella fase di Execute la Control Unit invia segnali che rappresentano opportuni comandi per l'esecuzione.
+1. Preleva il codice macchina dell'istruzione di indirizzo uguale al contenuto del registro PC e inseriscilo nel registro IR.
+2. Incrementa il contenuto del registro PC per puntare all'istruzione seguente.
+3. Decodifica l'istruzione appena prelevata.
+4. Se l'istruzione necessita di operandi, determina dove si trovano (memoria oppure registri).
+5. Se necessario, preleva dalla memoria gli operandi e ponili nei registri della CPU.
+6. Esegui l'istruzione.
+7. Salva il risultato in un registro o in una cella di memoria.
+8. Torna al punto 1.
