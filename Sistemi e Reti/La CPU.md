@@ -38,3 +38,15 @@ Nella fase di Execute la Control Unit invia segnali che rappresentano opportuni 
 6. Esegui l'istruzione.
 7. Salva il risultato in un registro o in una cella di memoria.
 8. Torna al punto 1.
+
+Il processo di esecuzione di un'istruzione nella CPU avviene in quattro fasi principali:
+
+1. Fetch: La CPU preleva l'istruzione dall'indirizzo memorizzato nel registro PC (Program Counter), in questo caso 0100h. L'istruzione è una sequenza di 6 byte, rappresentata come 00 05 0A 00 00 00. Questa istruzione viene poi inserita nel registro IR (Instruction Register).
+
+2. Decode: In questa fase, il codice macchina contenuto nel registro IR viene decodificato per capire quale operazione deve essere eseguita.
+
+3. Fetch degli operandi: La CPU recupera i dati necessari per l'operazione, in questo caso il valore dalla cella di memoria 000Ah, che è 05h.
+
+4. Execute: La CPU esegue l'operazione. In questo esempio, il valore 05h viene sommato al contenuto del registro AL (che ipotizziamo sia 0Fh). Il risultato, 14h, viene poi memorizzato nuovamente nella cella 000A.
+
+Queste operazioni richiedono diversi cicli del data path, la parte della CPU che gestisce l'elaborazione dei dati e include l'ALU (Arithmetic Logic Unit) e i registri. Ogni istruzione può richiedere uno o più cicli di data path per essere completata, e la velocità di questi cicli influisce sulla rapidità generale della CPU.
