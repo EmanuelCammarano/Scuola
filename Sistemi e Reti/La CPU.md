@@ -50,3 +50,47 @@ Il processo di esecuzione di un'istruzione nella CPU avviene in quattro fasi pri
 4. Execute: La CPU esegue l'operazione. In questo esempio, il valore 05h viene sommato al contenuto del registro AL (che ipotizziamo sia 0Fh). Il risultato, 14h, viene poi memorizzato nuovamente nella cella 000A.
 
 Queste operazioni richiedono diversi cicli del data path, la parte della CPU che gestisce l'elaborazione dei dati e include l'ALU (Arithmetic Logic Unit) e i registri. Ogni istruzione può richiedere uno o più cicli di data path per essere completata, e la velocità di questi cicli influisce sulla rapidità generale della CPU.
+## Nell'architettura della CPU
+L'architettura interna di un'unità centrale di elaborazione (CPU) può essere schematizzata:
+1. unità di controllo (CU, Control Unit)
+2. registro PC (Program Counter)
+3. registro IR (Instruction Register)
+4. registro PSW (Process Status Word)
+5. ALU
+6. registri generali
+7. registro MAR (Memory Address Register)
+8. registro MDR (Memory Data Register)
+9. BUS di controllo
+10. BUS indirizzi
+11. BUS dati
+### Il BUS interno
+Si tratta di un BUS che collega tutti gli elementi che fanno parte della CPU. Sono generalmente BUS di controllo, senza distinzione tra dati e indirizzi e non sono da confondere con i BUS esterni.
+### I Registri interni
+Un registro può essere paragonato a una lavagna: è uno spazio dove si scrivono informazioni per un breve periodo. Al contrario, una cella di memoria è simile a un quaderno o a un blocco note, utilizzata per memorizzare informazioni per un tempo più lungo.
+
+Ecco alcune differenze chiave:
+
+- Registri: Non hanno un indirizzo, ma un nome specifico. Sono usati per operazioni rapide e temporanee.
+- Celle di memoria: Hanno indirizzi specifici e possono memorizzare dati per periodi più lunghi.
+
+Esistono anche due tipi di registri:
+
+- Registri accessibili al programmatore: Questi possono essere utilizzati nei programmi e sono visibili al programmatore.
+
+- Registri non accessibili al programmatore: Questi sono utilizzati internamente dalla CPU per operazioni di controllo e non possono essere modificati direttamente dal programmatore.
+
+### MDR (Memory Data Register)
+È un registro interno collegato direttamente al BUS dati attra-
+verso un BUFFER BIDIREZIONALE TRI-STATE ().
+Questo tipo di registro non è visibile al programmatore e con-
+tiene i dati che la CPU vuole inviare oppure ricevere dalla memo-
+ria o dai dispositivi di I/O.
+
+### MAR (Memory Address Register)
+Il MAR (Memory Address Register) è un registro interno della CPU, collegato direttamente al BUS degli indirizzi. Non è visibile al programmatore e ha un ruolo fondamentale nella gestione della memoria.
+il MAR è essenziale per indirizzare correttamente le operazioni di lettura e scrittura in memoria, assicurando che la CPU possa accedere ai dati necessari per eseguire le istruzioni.
+
+### IR (Instruction Register)
+È il registro interno che riceve il codice operativo dell9istruzione prelevata durante la fase di fetch. È invisibile al 
+programmatore e contiene temporaneamente il codice operativo dell9istruzione durante la sua codifica.
+
